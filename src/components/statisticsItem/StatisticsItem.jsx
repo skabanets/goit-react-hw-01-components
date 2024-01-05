@@ -1,8 +1,14 @@
+import {
+  Label,
+  Percentage,
+  StatisticItem,
+} from 'components/statistics/Statistics.styled';
+
 export const StatisticsItem = ({ label, percentage }) => {
   return (
-    <li>
-      <span>{label}</span>
-      <span>{percentage}&#37;</span>
-    </li>
+    <StatisticItem>
+      <Label>{label}</Label>
+      <Percentage>{percentage}&#37;</Percentage>
+    </StatisticItem>
   );
 };

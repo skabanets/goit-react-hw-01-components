@@ -10,4 +10,5 @@ export const SectionTitle = styled.h2`
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
+  color: #646e74;
 `;

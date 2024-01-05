@@ -79,5 +79,5 @@ export const StatItem = styled.li`
 `;
 
 export const StatValue = styled.p`
-  font-weight: 600;
+  font-weight: 500;
 `;
