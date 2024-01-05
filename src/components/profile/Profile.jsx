@@ -1,31 +1,54 @@
-import React from 'react';
+import { Container } from 'components/container/Container.styled';
+import { Section, SectionTitle } from 'components/section/Section.styled';
+import {
+  Avatar,
+  StatItem,
+  StatValue,
+  Text,
+  UserCard,
+  UserDescription,
+  UserInfo,
+  UserName,
+  UserStats,
+  WrapperAvatar,
+} from './Profile.styled';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({ title, username, tag, location, avatar, stats }) => {
   const { followers, likes, views } = stats;
 
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>&#64;{tag}</p>
-        <p>{location}</p>
-      </div>
+    <Section>
+      <Container>
+        {title && <SectionTitle>{title}</SectionTitle>}
+        <UserCard>
+          <UserDescription>
+            <WrapperAvatar>
+              <Avatar src={avatar} alt="User avatar" />
+            </WrapperAvatar>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{likes}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{views}</span>
-        </li>
-      </ul>
-    </div>
+            <UserInfo>
+              <UserName>{username}</UserName>
+              <Text>&#64;{tag}</Text>
+              <Text>{location}</Text>
+            </UserInfo>
+          </UserDescription>
+
+          <UserStats>
+            <StatItem>
+              <Text>Followers</Text>
+              <StatValue>{followers}</StatValue>
+            </StatItem>
+            <StatItem>
+              <Text>Views</Text>
+              <StatValue>{likes}</StatValue>
+            </StatItem>
+            <StatItem>
+              <Text>Likes</Text>
+              <StatValue>{views}</StatValue>
+            </StatItem>
+          </UserStats>
+        </UserCard>
+      </Container>
+    </Section>
   );
 };

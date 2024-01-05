@@ -13,9 +13,11 @@ export const TransactionHistory = ({ transactions, title }) => {
             <th>Currency</th>
           </tr>
         </thead>
-        {transactions.map(el => (
-          <TransactionHistoryItem key={el.id} {...el} />
-        ))}
+        <tbody>
+          {transactions.map(el => (
+            <TransactionHistoryItem key={el.id} {...el} />
+          ))}
+        </tbody>
       </table>
     </section>
   );
