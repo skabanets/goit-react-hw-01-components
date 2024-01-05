@@ -2,7 +2,7 @@ import {
   Label,
   Percentage,
   StatisticItem,
-} from 'components/statistics/Statistics.styled';
+} from 'components/statisticsItem/StatisticsItem.styled';
 
 export const StatisticsItem = ({ label, percentage }) => {
   return (

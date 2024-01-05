@@ -1,13 +1,17 @@
+import {
+  FriendAvatar,
+  FriendName,
+  ListFriendsItem,
+  StatusBox,
+} from 'components/friendListItem/FriendListItem.styled';
+
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li>
-      {isOnline ? (
-        <span data-online="online"></span>
-      ) : (
-        <span data-online="onfline"></span>
-      )}
-      <img src={avatar} alt="User avatar" width="48" />
-      <p>{name}</p>
-    </li>
+    <ListFriendsItem>
+      <StatusBox $bg={isOnline ? 'green' : 'red'}></StatusBox>
+      <FriendAvatar src={avatar} alt="User avatar" width="48" />
+
+      <FriendName>{name}</FriendName>
+    </ListFriendsItem>
   );
 };
