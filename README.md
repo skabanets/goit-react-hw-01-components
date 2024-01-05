@@ -1,4 +1,4 @@
-# React-hw-01-components.
+# React-hw-01-components
 
 Creating and Styling Components:
 
