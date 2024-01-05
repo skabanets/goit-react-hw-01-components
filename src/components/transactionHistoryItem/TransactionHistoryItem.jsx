@@ -1,9 +1,11 @@
+import { TableRow, TableRowCell } from './TransactionHistoryItem.styled';
+
 export const TransactionHistoryItem = ({ type, amount, currency }) => {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableRow>
+      <TableRowCell>{type}</TableRowCell>
+      <TableRowCell>{amount}</TableRowCell>
+      <TableRowCell>{currency}</TableRowCell>
+    </TableRow>
   );
 };

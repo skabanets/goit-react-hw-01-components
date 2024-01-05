@@ -1,8 +1,4 @@
-import {
-  Label,
-  Percentage,
-  StatisticItem,
-} from 'components/statisticsItem/StatisticsItem.styled';
+import { Label, Percentage, StatisticItem } from './StatisticsItem.styled';
 
 export const StatisticsItem = ({ label, percentage }) => {
   return (
